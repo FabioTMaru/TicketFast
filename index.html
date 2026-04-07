@@ -490,6 +490,37 @@ h1 .gradient {
 .footer-dev {
   margin-bottom: 24px;
 }
+
+/* ── ALERT BOX ── */
+.alert-box {
+  background: rgba(232, 122, 42, 0.08);
+  border: 1px solid rgba(232, 122, 42, 0.3);
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin-bottom: 32px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  text-align: left;
+}
+.alert-box .alert-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.alert-box h4 {
+  font-family: 'Sora', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--orange);
+  margin-bottom: 6px;
+}
+.alert-box p {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+  margin: 0;
+}
 .footer-dev img {
   height: 70px;
   margin-bottom: 12px;
@@ -641,6 +672,22 @@ h1 .gradient {
   <div class="container">
     <h2>Como funciona?</h2>
     <p class="subtitle">Da compra ao primeiro preenchimento em menos de 5 minutos</p>
+
+    <div class="alert-box">
+      <div class="alert-icon">⚠️</div>
+      <div>
+        <h4>Requisito: Google Chrome com login</h4>
+        <p>Para baixar, instalar e usar o TicketFast, você precisa estar usando o navegador <strong style="color:var(--text-bright)">Google Chrome</strong> e estar <strong style="color:var(--text-bright)">logado na sua conta Google</strong> no navegador. Sem isso, a extensão não será instalada corretamente.</p>
+      </div>
+    </div>
+
+    <div class="alert-box" style="border-color: rgba(26, 143, 203, 0.3); background: rgba(26, 143, 203, 0.08);">
+      <div class="alert-icon">📧</div>
+      <div>
+        <h4 style="color: var(--accent-bright);">Importante: Use o mesmo e-mail</h4>
+        <p>O e-mail da sua conta do <strong style="color:var(--text-bright)">Mercado Pago</strong> deve ser o mesmo e-mail da sua <strong style="color:var(--text-bright)">conta Google logada no Chrome</strong>. A extensão valida seu acesso pelo e-mail de compra — se forem diferentes, a ativação não será reconhecida.</p>
+      </div>
+    </div>
 
     <div class="tab-nav">
       <button class="tab-btn active" data-tab="compra">1. Compra</button>
