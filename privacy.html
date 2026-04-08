@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade — TicketFast</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #06080f;
+  --card: #0d1117;
+  --text: #e2e8f0;
+  --dim: #94a3b8;
+  --accent: #1a8fcb;
+  --orange: #e87a2a;
+  --border: rgba(255,255,255,0.06);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'DM Sans',sans-serif; background:var(--bg); color:var(--text); line-height:1.8; }
+.container { max-width:760px; margin:0 auto; padding:60px 24px 80px; }
+h1 { font-family:'Sora',sans-serif; font-size:2rem; font-weight:700; margin-bottom:8px; }
+h1 span { color:var(--orange); }
+.subtitle { color:var(--dim); font-size:0.95rem; margin-bottom:40px; }
+h2 { font-family:'Sora',sans-serif; font-size:1.2rem; font-weight:600; color:var(--accent); margin-top:36px; margin-bottom:12px; }
+p { color:var(--dim); margin-bottom:16px; font-size:0.95rem; }
+ul { color:var(--dim); margin-bottom:16px; padding-left:24px; font-size:0.95rem; }
+li { margin-bottom:8px; }
+strong { color:var(--text); }
+a { color:var(--accent); text-decoration:none; }
+a:hover { text-decoration:underline; }
+.back { display:inline-block; margin-bottom:32px; color:var(--accent); font-size:0.9rem; }
+.footer { margin-top:60px; padding-top:24px; border-top:1px solid var(--border); text-align:center; color:var(--dim); font-size:0.8rem; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<a href="https://ticketfastext.vercel.app" class="back">← Voltar para o site</a>
+
+<h1>Política de Privacidade — Ticket<span>Fast</span></h1>
+<p class="subtitle">Última atualização: 09 de abril de 2026</p>
+
+<h2>1. Introdução</h2>
+<p>O TicketFast é uma extensão para Google Chrome desenvolvida pela FTM Development. Esta política descreve como coletamos, usamos e protegemos as informações dos usuários.</p>
+
+<h2>2. Dados coletados</h2>
+<p>O TicketFast coleta e armazena os seguintes dados, <strong>fornecidos voluntariamente pelo próprio usuário</strong>:</p>
+<ul>
+  <li><strong>Dados pessoais para preenchimento:</strong> nome, sobrenome, CPF, data de nascimento, CIE, validade do CIE, instituição de ensino, cidade, estado, curso e código de acesso (BTS Army ou similar).</li>
+  <li><strong>Email:</strong> utilizado exclusivamente para verificação de licença (confirmação de pagamento).</li>
+  <li><strong>Identificador do dispositivo:</strong> um código gerado aleatoriamente para vincular a licença a um único computador.</li>
+</ul>
+<p>A extensão <strong>não coleta</strong> histórico de navegação, cookies, senhas, dados de cartão de crédito armazenados no navegador, nem qualquer informação de outras abas ou sites.</p>
+
+<h2>3. Armazenamento dos dados</h2>
+<p>Os dados pessoais para preenchimento (nome, CPF, etc.) são armazenados <strong>localmente no navegador do usuário</strong> através da API Chrome Storage. Esses dados <strong>nunca são enviados para servidores externos</strong>.</p>
+<p>Os dados de cartão de crédito inseridos na extensão são temporários e <strong>apagados automaticamente ao fechar a extensão</strong>. Eles não são salvos em nenhum local.</p>
+<p>O email e o identificador do dispositivo são armazenados em um banco de dados seguro (Supabase) exclusivamente para fins de verificação de licença.</p>
+
+<h2>4. Uso dos dados</h2>
+<p>Os dados coletados são utilizados exclusivamente para:</p>
+<ul>
+  <li>Preencher automaticamente formulários no site do Ticketmaster conforme solicitado pelo usuário.</li>
+  <li>Verificar se o usuário possui uma licença válida (pagamento confirmado).</li>
+  <li>Vincular a licença a um dispositivo para evitar uso não autorizado.</li>
+</ul>
+
+<h2>5. Compartilhamento de dados</h2>
+<p><strong>Não vendemos, transferimos ou compartilhamos dados dos usuários com terceiros.</strong> Nenhuma informação pessoal é enviada para fins de publicidade, análise ou qualquer outro propósito que não seja o funcionamento da extensão.</p>
+
+<h2>6. Segurança</h2>
+<p>Adotamos as seguintes medidas de segurança:</p>
+<ul>
+  <li>Dados pessoais armazenados localmente no navegador (não trafegam pela internet).</li>
+  <li>Comunicação com o servidor de verificação de licença via HTTPS (criptografia TLS).</li>
+  <li>Banco de dados com criptografia em repouso (AES-256).</li>
+  <li>Dados de cartão de crédito nunca são persistidos — são apagados ao fechar a extensão.</li>
+</ul>
+
+<h2>7. Permissões da extensão</h2>
+<p>O TicketFast solicita as seguintes permissões do Chrome, cada uma com sua justificativa:</p>
+<ul>
+  <li><strong>storage:</strong> salvar dados do usuário localmente no navegador.</li>
+  <li><strong>activeTab:</strong> acessar a aba ativa para preencher formulários do Ticketmaster.</li>
+  <li><strong>scripting:</strong> injetar o script de preenchimento automático na página do Ticketmaster.</li>
+  <li><strong>sidePanel:</strong> exibir a interface da extensão como painel lateral.</li>
+  <li><strong>tabs:</strong> identificar a aba correta do Ticketmaster para preenchimento.</li>
+  <li><strong>identity / identity.email:</strong> detectar o email da conta Google para facilitar a verificação de licença.</li>
+  <li><strong>Host permissions (ticketmaster.com, ticketmaster.com.br):</strong> acessar os formulários do Ticketmaster para preenchimento automático.</li>
+  <li><strong>Host permissions (supabase.co):</strong> verificar a licença do usuário no servidor.</li>
+</ul>
+
+<h2>8. Direitos do usuário</h2>
+<p>O usuário pode, a qualquer momento:</p>
+<ul>
+  <li>Visualizar e editar seus dados diretamente na extensão.</li>
+  <li>Excluir todos os seus dados removendo a extensão do Chrome.</li>
+  <li>Solicitar a exclusão dos dados de licença (email e device_id) entrando em contato conosco.</li>
+  <li>Deslogar da extensão clicando no botão "Sair".</li>
+</ul>
+
+<h2>9. Código remoto</h2>
+<p>O TicketFast <strong>não utiliza código remoto</strong>. Todo o código da extensão está incluído no pacote instalado. A única comunicação externa é uma chamada de API (fetch) ao servidor Supabase para verificação de licença.</p>
+
+<h2>10. Menores de idade</h2>
+<p>O TicketFast não é direcionado a menores de 13 anos. Não coletamos intencionalmente dados de crianças.</p>
+
+<h2>11. Alterações nesta política</h2>
+<p>Podemos atualizar esta política periodicamente. Alterações significativas serão comunicadas através do site oficial.</p>
+
+<h2>12. Contato</h2>
+<p>Para dúvidas, solicitações ou reclamações relacionadas à privacidade:</p>
+<ul>
+  <li><strong>Email:</strong> <a href="mailto:ticketfastext@gmail.com">ticketfastext@gmail.com</a></li>
+  <li><strong>Instagram:</strong> <a href="https://instagram.com/ftmdevelopment" target="_blank">@ftmdevelopment</a></li>
+  <li><strong>Site:</strong> <a href="https://ticketfastext.vercel.app" target="_blank">ticketfastext.vercel.app</a></li>
+</ul>
+
+<div class="footer">
+  <p>TicketFast — Desenvolvido por FTM Development</p>
+  <p>Este produto não é afiliado ao Ticketmaster.</p>
+</div>
+
+</div>
+</body>
+</html>
