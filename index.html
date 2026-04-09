@@ -632,9 +632,12 @@ h1 .gradient {
       <a href="#download" style="display:inline-flex; align-items:center; gap:8px; padding:12px 28px; border-radius:100px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); color:var(--accent-bright); font-family:'Sora',sans-serif; font-weight:600; font-size:0.95rem; text-decoration:none; transition:all 0.3s;">📥 Já comprou? Clique aqui para baixar</a>
     </div>
     <div style="margin: 40px auto 0; max-width: 720px; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); box-shadow: 0 4px 30px rgba(0,0,0,0.3); animation: fadeDown 0.8s 0.85s ease both;">
-      <div style="position: relative; padding-bottom: 56.25%; height: 0;">
-        <iframe src="https://www.youtube.com/embed/IIUvdmqPTwg" title="TicketFast — Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-      </div>
+      <a href="https://youtu.be/IIUvdmqPTwg" target="_blank" style="display:block; position:relative;">
+        <img src="https://img.youtube.com/vi/IIUvdmqPTwg/maxresdefault.jpg" alt="TicketFast — Tutorial" style="width:100%; display:block;">
+        <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.35);">
+          <svg width="72" height="72" viewBox="0 0 72 72" fill="none"><circle cx="36" cy="36" r="36" fill="rgba(0,0,0,0.6)"/><polygon points="28,20 28,52 54,36" fill="#fff"/></svg>
+        </div>
+      </a>
     </div>
   </div>
 </section>
@@ -1039,4 +1042,8 @@ document.querySelectorAll('.faq-q').forEach(q => {
 // Scroll reveal
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { thresho
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
